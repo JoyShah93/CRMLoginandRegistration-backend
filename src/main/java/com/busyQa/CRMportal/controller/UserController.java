@@ -29,6 +29,11 @@ public class UserController {
 	@Autowired
 	private BCryptPasswordEncoder bCryptpasswordencoder;
 	
+	@GetMapping("/test")
+	public String test() {
+		return "Welcome to backend api of CRMportal";
+	}
+	
 	@PostMapping("/")
 	public User createUser(@RequestBody User user) throws Exception {
 		
